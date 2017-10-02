@@ -1,0 +1,23 @@
+h4 {
+  background-color: lightblue;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.girl-types {
+  background-color: lightblue;
+  padding: 10px;
+  margin: 20px;
+}
+.font-color {
+  color: #1585f5;
+}
+.card-girl-type {
+  min-height: 390px !important;
+}
+.card-girl-img {
+  object-fit: cover;
+  height: 20vw !important;
+}

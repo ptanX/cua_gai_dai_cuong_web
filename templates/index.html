@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cưa Gái Đại Cương</title>
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/index.css">
+  <body>
+    <h3 class="jumpbotron display-3 d-none d-md-block">Cưa gái đại cương </h4>
+    <div class="container">
+      <div class="row">
+        {% for girl_type in girl_types %}
+          <div class="card-girl-type col-md-4 m*-4 ">
+            <div class="card">
+              <img src="{{ girl_type["image"] }}" alt="{{ girl_type["name"] }}" class="mb-3 img-fluid card-img-top card-girl-img">
+              <div class="card-body">
+                <div class="card-title">{{ girl_type["name"] }}</div>
+                <div class="font-color" style="color:#1585f5">
+                  {{ girl_type["description"] }}
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="clearfix">
+                  <button class="btn btn-primary float-right">Chi tiết</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
