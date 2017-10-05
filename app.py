@@ -1,4 +1,5 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, send_from_directory
+import os
 import mlab
 from mongoengine import Document, StringField
 mlab.connect()
@@ -41,8 +42,8 @@ def index():
     return render_template('index.html', girl_types = GirlType.objects())
 @app.route('/favicon.ico')
 def favicon():
-    return app.add_url_rule('/favicon.ico',
-                 redirect_to=url_for('static', filename='favicon.ico'))
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico')
 @app.route('/about')
 def about():
     return render_template('about.html')
