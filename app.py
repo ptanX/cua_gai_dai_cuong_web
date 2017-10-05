@@ -39,6 +39,10 @@ g= [
 @app.route('/')
 def index():
     return render_template('index.html', girl_types = GirlType.objects())
+@app.route('/favicon.ico')
+def favicon():
+    return app.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
 @app.route('/about')
 def about():
     return render_template('about.html')
