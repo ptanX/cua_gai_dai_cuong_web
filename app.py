@@ -51,4 +51,7 @@ def about():
 def school():
     return redirect("http://techkids.vn/")
 
-app.run()
+def main():
+    app.run()
+if __name__ == '__main__':
+    main()
